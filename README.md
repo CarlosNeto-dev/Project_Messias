@@ -29,7 +29,7 @@ Este projeto está sendo desenvolvido em colaboração pelo seguinte grupo:
 
 ---
 
-### 🛠️ FERRAMENTAS UTILIZADAS (Tools Used) 🛠️
+### 🛠️ FERRAMENTAS UTILIZADAS 🛠️
 
 | Ferramenta | Emoji |
 |:-----------| :--- |
