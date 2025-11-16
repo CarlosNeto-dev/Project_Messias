@@ -10,9 +10,9 @@ O projeto visa aplicar conceitos e tecnologias chave da área para cumprir os re
 
 ---
 
-### ⚠️ Tema do Projeto ⚠️
+### 💡 Tema do Projeto 💡
 
-**O tema específico do trabalho ainda está em fase de definição e será determinado em breve pelo grupo.**
+O tema do projeto será focado em **Certificações**.
 
 ---
 
@@ -20,22 +20,23 @@ O projeto visa aplicar conceitos e tecnologias chave da área para cumprir os re
 
 Este projeto está sendo desenvolvido em colaboração pelo seguinte grupo:
 
-| Função      | Nome                         |
-|:------------|:-----------------------------|
-| **Líder**   | Carlos Alberto da Silva Neto |
-| Integrante  | Alex Diniz                   |
-| Integrante  | Lucas Araújo                 |
-| Integrante  | Gustavo                      |
+| Função | Nome |
+| :--- | :--- |
+| **Líder** | Carlos Alberto da Silva Neto |
+| Integrante | Alex Diniz |
+| Integrante | Lucas Araújo |
+| Integrante | Gustavo |
+| Integrante | Guilherme |
 
 ---
 
 ### 🛠️ FERRAMENTAS UTILIZADAS 🛠️
 
 | Ferramenta | Emoji |
-|:-----------| :--- |
-| Python     | 🐍 |
-| HTML       | 📄 |
-| Figma      | 📐 |
+| :--- | :--- |
+| Python | 🐍 |
+| HTML | 📄 |
+| Figma | 📐 |
 
 ***
 
@@ -49,9 +50,9 @@ The project aims to apply key concepts and technologies in the field to meet the
 
 ---
 
-### ⚠️ Project Theme ⚠️
+### 💡 Project Theme 💡
 
-**The specific theme of the work is still being defined and will be determined by the group shortly.**
+The project theme will be focused on **Certifications**.
 
 ---
 
@@ -65,6 +66,7 @@ This project is being developed in collaboration by the following group:
 | Member | Alex Diniz |
 | Member | Lucas Araújo |
 | Member | Gustavo |
+| Member | Guilherme |
 
 ---
 
