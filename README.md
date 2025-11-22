@@ -23,10 +23,12 @@ Este projeto está sendo desenvolvido em colaboração pelo seguinte grupo:
 | Função | Nome |
 | :--- | :--- |
 | **Líder** | Carlos Alberto da Silva Neto |
-| Integrante | Alex Diniz |
-| Integrante | Lucas Araújo |
-| Integrante | Gustavo |
-| Integrante | Guilherme |
+| Integrante | José Alex Diniz de Oliveira |
+| Integrante | Guilherme de Santana Silva |
+| Integrante | Gustavo de Oliveira Marques |
+| Integrante | Lucas Gomes de Araújo |
+| Integrante | Issac Lima de Carvalho |
+
 
 ---
 
@@ -36,7 +38,8 @@ Este projeto está sendo desenvolvido em colaboração pelo seguinte grupo:
 | :--- | :--- |
 | Python | 🐍 |
 | HTML | 📄 |
-| Figma | 📐 |
+| CSS | 🎨 |
+| Bootstrap | 🅱️ |
 
 ***
 
@@ -63,10 +66,11 @@ This project is being developed in collaboration by the following group:
 | Role | Name |
 | :--- | :--- |
 | **Leader** | Carlos Alberto da Silva Neto |
-| Member | Alex Diniz |
-| Member | Lucas Araújo |
-| Member | Gustavo |
-| Member | Guilherme |
+| Member | José Alex Diniz de Oliveira |
+| Member | Guilherme de Santana Silva |
+| Member | Gustavo de Oliveira Marques |
+| Member | Lucas Gomes de Araújo |
+| Member | Issac Lima de Carvalho |
 
 ---
 
@@ -76,4 +80,5 @@ This project is being developed in collaboration by the following group:
 | :--- | :--- |
 | Python | 🐍 |
 | HTML | 📄 |
-| Figma | 📐 |
+| CSS | 🎨 |
+| Bootstrap | 🅱️ |
