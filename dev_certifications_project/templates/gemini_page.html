@@ -1,0 +1,51 @@
+{% extends "model.html" %}
+
+{% block content %}
+    <div style="padding-top: 50px;">
+
+    <div class="d-flex justify-content-center align-items-center mb-5">
+
+        <h1 class="me-3 mb-0">Assistente Gemini</h1>
+
+        <img
+            src="{{ url_for('static', filename='gemini_logo.png') }}"
+            alt="Símbolo do Gemini"
+            class="img-fluid"
+            style="width: 50px; height: 50px;"
+        >
+    </div>
+    <form method="POST" action="/gemini">
+    <div class="mb-4">
+        <textarea
+            class="form-control"
+            id="perguntaUsuario"
+            name="pergunta"
+            rows="3"
+            placeholder="Digite sua pergunta ao Assistente Gemini..."
+            oninvalid = "this.setCustomValidity('Por favor, digite sua pergunta antes de enviar.');"
+            oninput="this.setCustomValidity('')"
+            required
+        ></textarea>
+    </div>
+
+    <div class="d-flex justify-content-center mb-5">
+
+        <button type="submit" class="btn btn-primary btn-lg">
+            Enviar
+        </button>
+
+    </div>
+    </form>
+{% if gemini_response %}
+<div class="mt-5">
+    <div class="card border-success shadow-lg">
+        <div class="card-header bg-success text-white fw-bold d-flex align-items-center">
+            <i class="fas fa-robot me-2"></i> Resposta do Assistente Gemini
+        </div>
+        <div class="card-body">
+            <p class="card-text resposta-formatada">{{ gemini_response | safe }}</p>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
