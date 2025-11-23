@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 import google.generativeai as genai
 import markdown
 
-key_of_gemini = genai.configure(api_key="AIzaSyA811-hMyJ9RNWgTAku4q_xC4zftNNSLnw")
+key_of_gemini = genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 app = Flask(__name__)
 
