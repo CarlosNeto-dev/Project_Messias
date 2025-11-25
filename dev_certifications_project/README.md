@@ -10,6 +10,7 @@ A maior parte dos modelos e componentes visuais do site será construída **util
 ### 📁 O que esta pasta contém
 - `app.py` — Aplicação principal
 - `/templates` — Páginas HTML
+- `/static` — Arquivos estáticos (CSS, JS, imagens)
 - `/docs` — Documentação complementar
 
 ### 📦 Dependências necessárias
@@ -36,6 +37,7 @@ Most of the site's visual templates and components will be built **using Bootstr
 ### 📁 What this folder contains
 - `app.py` — Main application
 - `/templates` — HTML pages
+- `/static` — Static files (CSS, JS, images)
 - `/docs` — Supplementary documentation
 
 ### 📦 Required Dependencies
