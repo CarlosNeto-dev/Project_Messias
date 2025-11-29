@@ -23,5 +23,18 @@ def certificacoes_page():
 def sobre_page():
     return render_template("sobre.html")
 
+@app.route("/certificacoes/aws")
+def aws_page():
+    return render_template("aws.html")
+
+@app.route("/certificacoes/google")
+def google_page():
+    return render_template("google.html")
+
+@app.route("/certificacoes/scrum")
+def scrum_page():
+    return render_template("scrum.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
