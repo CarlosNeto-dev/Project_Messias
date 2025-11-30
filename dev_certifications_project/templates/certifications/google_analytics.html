@@ -1,0 +1,91 @@
+{% extends "model.html" %}
+
+{% block hero %}
+<div class="hero">
+    <h1>Google Analytics Certification</h1>
+    <p class="animated-subtitle">Domine métricas, coleta e análise de dados digitais (GA4).</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <section class="info-section">
+        <h2 class="section-title">O que é a Certificação Google Analytics?</h2>
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <p>
+                    A certificação do Google Analytics (atualmente focada no <strong>GA4</strong>) valida a sua habilidade em transformar dados brutos de websites e aplicativos em <strong>insights de negócios acionáveis</strong>. Ela confirma que você sabe configurar a ferramenta corretamente, coletar dados e interpretar relatórios.
+                </p>
+                <p>
+                    É fundamental para quem busca entender o comportamento do usuário e otimizar campanhas de marketing digital.
+                </p>
+            </div>
+            <div class="col-md-5 text-center">
+                <div class="cert-image-highlight">
+                    <img src="{{ url_for('static', filename='img/cert_cards/imagem_certificado-google-analytics.png') }}"
+                         alt="Certificado Google Analytics"
+                         class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section class="info-section">
+        <h2 class="section-title text-center mb-4">Módulos de Conhecimento Chave</h2>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="custom-card interactive-card">
+                    <i class="bi bi-graph-up card-icon"></i>
+                    <h5 class="card-title">Estrutura de Dados (GA4)</h5>
+                    <p class="card-text">Compreensão da diferença entre eventos, parâmetros e usuários, o cerne do modelo de dados do GA4.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="custom-card interactive-card">
+                    <i class="bi bi-bar-chart-fill card-icon"></i>
+                    <h5 class="card-title">Relatórios e Explorações</h5>
+                    <p class="card-text">Uso e personalização dos relatórios padrão e criação de relatórios customizados para insights profundos.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="custom-card interactive-card">
+                    <i class="bi bi-link-45deg card-icon"></i>
+                    <h5 class="card-title">Integrações e Métricas</h5>
+                    <p class="card-text">Como conectar o GA4 com outras ferramentas Google e dominar métricas essenciais como Engajamento e Conversão.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section class="info-section">
+        <h2 class="section-title">Vantagens Profissionais</h2>
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <ul class="styled-list">
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Essencial para Marketing Digital:</strong> Base para qualquer profissional de tráfego, SEO e performance.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Valorizada em Empresas:</strong> Demonstra capacidade de tomar decisões baseadas em dados, não apenas em intuição.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Certificação Oficial Google:</strong> Gratuita e altamente reconhecida pelo mercado global de tecnologia.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Otimização Contínua:</strong> Capacidade de identificar gargalos e oportunidades para melhorar a experiência do usuário.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+<section class="text-center mt-5 mb-5">
+        <h3 class="section-title">Pronto para dominar o GA4?</h3>
+        <p>Acesse a plataforma oficial Google Analytics para iniciar o treinamento e fazer o exame da certificação.</p>
+        <a href="https://developers.google.com/analytics?hl=pt-br" target="_blank" class="btn btn-primary btn-lg mt-3">
+            <i class="bi bi-box-arrow-up-right"></i> Ir para o Google Analytics
+        </a>
+    </section>
+</div>
+{% endblock %}
