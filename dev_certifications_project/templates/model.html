@@ -30,7 +30,31 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Certificações</a></li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Certificações
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item dropdown-cert-item" href="/certifications/aws">
+                                <img src="{{ url_for('static', filename='img/cert_cards/image-aws.png') }}" alt="AWS" class="cert-icon-dropdown">
+                                AWS Cloud Practitioner
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item dropdown-cert-item" href="/certifications/google_analytics">
+                                <img src="{{ url_for('static', filename='img/cert_cards/imagem_certificado-google-analytics.png') }}" alt="Google Analytics" class="cert-icon-dropdown">
+                                Google Analytics
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item dropdown-cert-item" href="/certifications/pcep">
+                                <img src="{{ url_for('static', filename='img/cert_cards/imagem_certificado-pcep.png') }}" alt="PCEP" class="cert-icon-dropdown">
+                                PCEP (Python)
+                            </a>
+                        </li>
+                    </ul>
                     <li class="nav-item"><a class="nav-link" href="#">Sobre Equipe</a></li>
 
                     <li class="nav-item">
