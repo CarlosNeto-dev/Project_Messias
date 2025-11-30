@@ -1,51 +1,76 @@
 {% extends "model.html" %}
 
 {% block content %}
-    <div style="padding-top: 50px;">
+<div class="container mt-5">
+    
+    <h1 class="text-center mb-4">
+        Assistente Gemini 
+        <img src="{{ url_for('static', filename='img/gemini_simbolo.png') }}" 
+             alt="Ícone Gemini" 
+             class="gemini-icon-animated">
+    </h1>
+    <p class="text-center lead text-muted mb-5">
+        <p class="text-center animated-subtitle mb-5" style="font-size: 1.25rem;">
+            Pergunte sobre certificações, tecnologias e o universo da programação.
+    </p>
 
-    <div class="d-flex justify-content-center align-items-center mb-5">
-
-        <h1 class="me-3 mb-0">Assistente Gemini</h1>
-
-        <img
-            src="{{ url_for('static', filename='gemini_logo.png') }}"
-            alt="Símbolo do Gemini"
-            class="img-fluid"
-            style="width: 50px; height: 50px;"
-        >
-    </div>
-    <form method="POST" action="/gemini">
-    <div class="mb-4">
-        <textarea
-            class="form-control"
-            id="perguntaUsuario"
-            name="pergunta"
-            rows="3"
-            placeholder="Digite sua pergunta ao Assistente Gemini..."
-            oninvalid = "this.setCustomValidity('Por favor, digite sua pergunta antes de enviar.');"
-            oninput="this.setCustomValidity('')"
-            required
-        ></textarea>
-    </div>
-
-    <div class="d-flex justify-content-center mb-5">
-
-        <button type="submit" class="btn btn-primary btn-lg">
-            Enviar
-        </button>
-
-    </div>
-    </form>
-{% if gemini_response %}
-<div class="mt-5">
-    <div class="card border-success shadow-lg">
-        <div class="card-header bg-success text-white fw-bold d-flex align-items-center">
-            <i class="fas fa-robot me-2"></i> Resposta do Assistente Gemini
-        </div>
-        <div class="card-body">
-            <p class="card-text resposta-formatada">{{ gemini_response | safe }}</p>
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card p-4 shadow-sm border-0">
+                <form id="gemini-form" method="POST" action="/gemini">
+                    <div class="mb-3">
+                        <label for="user-prompt" class="form-label visually-hidden">Sua pergunta</label>
+                        <textarea class="form-control form-control-lg minimalist-textarea" 
+                                  id="user-prompt" 
+                                  name="question"
+                                  rows="4" 
+                                  placeholder="Como a certificação AWS Cloud Practitioner pode impulsionar minha carreira?"></textarea>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button id="send-button" class="btn btn-primary btn-lg" type="submit">
+                            <span id="send-icon"><i class="bi bi-send-fill me-2"></i> Enviar Pergunta</span>
+                            <span id="loading-spinner" class="d-none">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Carregando...
+                            </span>
+                        </button>
+                    </div>
+            </form>
+            </div>
+            <div id="response-area" class="card mt-5 p-4 shadow-sm border-0" style="min-height: 250px;">
+                <h5 class="card-title text-primary mb-3">Resposta do Gemini:</h5>
+                {% if gemini_response %}
+                    <div class="gemini-response-content">
+                        {{ gemini_response | safe }}
+                    </div>
+                {% elif comunication_error %}
+                    <p class="text-danger">**Erro:** {{ comunication_error }}</p>
+                {% else %}
+                    <p class="text-muted">Aguardando sua pergunta...</p>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
-{% endif %}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }} <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('gemini-form');
+            const sendButton = document.getElementById('send-button');
+            const sendIcon = document.getElementById('send-icon');
+            const loadingSpinner = document.getElementById('loading-spinner');
+
+            if (form && sendButton) {
+                form.addEventListener('submit', function() {
+                    sendButton.disabled = true;
+
+                    sendIcon.classList.add('d-none');
+
+                    loadingSpinner.classList.remove('d-none');
+                });
+            }
+        });
+    </script>
 {% endblock %}
