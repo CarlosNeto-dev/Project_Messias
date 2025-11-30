@@ -1,0 +1,54 @@
+{% extends "model.html" %}
+
+{% block content %}
+
+<div class="hero">
+    <h1>Guia de Certificações para Desenvolvedores</h1>
+    <p>
+        Encontre certificações essenciais para começar ou acelerar sua carreira em tecnologia —
+        tudo organizado de forma simples e objetiva.
+    </p>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">
+        <span class="star-animated">⭐</span>
+        Certificações em Destaque
+        <span class="star-animated">⭐</span>
+    </h2>
+
+
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <a href="/certifications/aws" class="text-decoration-none">
+                <div class="cert-card">
+                    <img src="{{ url_for('static', filename='img/cert_cards/image-aws.png') }}" alt="AWS Cloud">
+                    <div class="cert-card-title">AWS Cloud</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/certifications/google_analytics" class="text-decoration-none">
+                <div class="cert-card">
+                    <img src="{{ url_for('static', filename='img/cert_cards/imagem_certificado-google-analytics.png') }}" alt="Google Analytics">
+                    <div class="cert-card-title">Google Analytics</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/certifications/pcep" class="text-decoration-none">
+                <div class="cert-card">
+                    <img src="{{ url_for('static', filename='img/cert_cards/imagem_certificado-pcep.png') }}" alt="PCEP">
+                    <div class="cert-card-title">PCEP (Python)</div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

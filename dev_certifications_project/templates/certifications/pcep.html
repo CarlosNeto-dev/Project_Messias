@@ -1,0 +1,90 @@
+{% extends "model.html" %}
+
+{% block hero %}
+<div class="hero">
+    <h1>PCEP Certification</h1>
+    <p class="animated-subtitle">Sua primeira certificação oficial em Python da Python Institute.</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <section class="info-section">
+        <h2 class="section-title">O que é a Certificação PCEP?</h2>
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <p>
+                    A PCEP (Certified Entry-Level Python Programmer) é o primeiro passo na trilha de certificações Python do Python Institute. Ela certifica que você domina os <strong>fundamentos da linguagem</strong> e a lógica de programação essencial para construir pequenos scripts. É ideal para quem está começando na programação.
+                </p>
+                <p>
+                    Comprova que você possui uma base sólida em Python, preparando-o para desafios mais complexos.
+                </p>
+            </div>
+            <div class="col-md-5 text-center">
+                <div class="cert-image-highlight">
+                    <img src="{{ url_for('static', filename='img/cert_cards/imagem_certificado-pcep.png') }}"
+                         alt="Certificado PCEP Python"
+                         class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section class="info-section">
+        <h2 class="section-title text-center mb-4">Tópicos do Exame PCEP</h2>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="custom-card interactive-card">
+                    <i class="bi bi-file-earmark-code card-icon"></i>
+                    <h5 class="card-title">Fundamentos da Linguagem</h5>
+                    <p class="card-text">Conceitos como sintaxe, estrutura, regras de execução do Python e tipos de dados básicos (variáveis, strings, números).</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="custom-card interactive-card">
+                    <i class="bi bi-share card-icon"></i>
+                    <h5 class="card-title">Estruturas de Controle</h5>
+                    <p class="card-text">Uso correto de condicionais (`if/else`) e loops (`for/while`) para controlar o fluxo de execução do programa.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="custom-card interactive-card">
+                    <i class="bi bi-list-columns-reverse card-icon"></i>
+                    <h5 class="card-title">Estruturas de Dados e Funções</h5>
+                    <p class="card-text">Uso básico de Listas, Tuplas, Dicionários e a criação e invocação de funções.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section class="info-section">
+        <h2 class="section-title">Por que tirar esta certificação?</h2>
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <ul class="styled-list">
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Porta de Entrada Sólida:</strong> Valida seu conhecimento com um selo oficial da Python Institute.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Linguagem em Alta Demanda:</strong> Python é amplamente utilizada em diversas áreas da tecnologia.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Preparação Estruturada:</strong> O exame força o aprendizado estruturado, em vez de apenas seguir tutoriais.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Caminho de Carreira:</strong> É a base para certificações mais avançadas como PCAP e PCPP.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+<section class="text-center mt-5 mb-5">
+        <h3 class="section-title">Pronto para programar?</h3>
+        <p>Acesse o site oficial do Python Institute para ver os objetivos de aprendizagem e iniciar sua jornada de certificação.</p>
+        <a href="https://pythoninstitute.org/pcep" target="_blank" class="btn btn-primary btn-lg mt-3">
+            <i class="bi bi-box-arrow-up-right"></i> Visitar Site Oficial do Python Institute
+        </a>
+    </section>
+</div>
+{% endblock %}

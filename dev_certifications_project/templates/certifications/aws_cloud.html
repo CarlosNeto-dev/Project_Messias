@@ -1,0 +1,99 @@
+{% extends "model.html" %}
+
+{% block hero %}
+<div class="hero">
+    <h1>AWS Certified Cloud Practitioner</h1>
+    <p class="animated-subtitle">A certificação fundamental para o mundo da Computação em Nuvem.</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    
+    <section class="info-section">
+        <h2 class="section-title">O que é a Certificação AWS Cloud Practitioner?</h2>
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <p>
+                    A AWS Certified Cloud Practitioner é o certificado de nível <strong>Foundational (fundacional)</strong> da Amazon Web Services. Diferente das certificações de nível Associate ou Professional, que exigem "mão na massa", esta foca no <strong>entendimento holístico</strong> da nuvem. É a base para todas as outras certificações AWS.
+                </p>
+                <p>
+                    Ela valida que o profissional compreende:
+                </p>
+                <ul>
+                    <li>O que é a Nuvem AWS e sua infraestrutura global.</li>
+                    <li>Os princípios básicos de arquitetura de software na nuvem (Pilares do Well-Architected Framework).</li>
+                    <li>A proposta de valor (custo vs. benefício) e modelos de cobrança.</li>
+                    <li>Os principais serviços e seus casos de uso básicos (EC2, S3, RDS, Lambda).</li>
+                    <li>Segurança, conformidade e o <strong>Modelo de Responsabilidade Compartilhada</strong>.</li>
+                </ul>
+            </div>
+            <div class="col-md-5 text-center">
+                <div class="cert-image-highlight">
+                <img src="{{ url_for('static', filename='img/cert_cards/image-aws.png') }}"
+                alt="Visão Geral AWS Cloud Practitioner"
+                class="img-fluid rounded">
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section class="info-section">
+        <h2 class="section-title text-center mb-4">Para quem é indicada?</h2>
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="custom-card interactive-card">
+                    <i class="bi bi-mortarboard-fill card-icon"></i>
+                    <h5 class="card-title">Estudantes e Iniciantes em TI</h5>
+                    <p class="card-text">Fornece a base teórica necessária antes de partir para configurações complexas. Ótimo ponto de partida para quem busca uma carreira em Cloud.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="custom-card interactive-card">
+                    <i class="bi bi-code-slash card-icon"></i>
+                    <h5 class="card-title">Desenvolvedores e Arquitetos</h5>
+                    <p class="card-text">É crucial entender como as peças se encaixam e como a segurança funciona antes de configurar APIs ou subir contêineres na nuvem.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="custom-card interactive-card">
+                    <i class="bi bi-briefcase-fill card-icon"></i>
+                    <h5 class="card-title">Profissionais de Negócios</h5>
+                    <p class="card-text">Gerentes de projeto, vendas e executivos usam esse conhecimento para tomar decisões sobre custos e migrações.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section class="info-section">
+        <h2 class="section-title">Por que tirar esta certificação?</h2>
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <ul class="styled-list">
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Reconhecimento Internacional:</strong> Valida seu conhecimento com o selo da líder mundial em nuvem.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Bases Sólidas em Cloud:</strong> Fornece um entendimento fundamental, essencial para qualquer função em nuvem.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Alta Demanda no Mercado:</strong> Profissionais com certificações AWS são muito requisitados por empresas globalmente.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong>Caminho de Carreira:</strong> É o primeiro passo para certificações mais avançadas, como Solutions Architect ou Developer.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+<section class="text-center mt-5 mb-5">
+        <h3 class="section-title">Pronto para começar?</h3>
+        <p>Acesse o site oficial da Amazon Web Services para detalhes sobre o exame, preço e agendamento.</p>
+        <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank" class="btn btn-primary btn-lg mt-3">
+            <i class="bi bi-box-arrow-up-right"></i> Visitar Site Oficial da AWS
+        </a>
+    </section>
+</div>
+{% endblock %}
