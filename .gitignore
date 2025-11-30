@@ -11,3 +11,6 @@ __pycache__/
 
 # Ignorar arquivos de metadados do macOS
 .DS_Store
+
+# Arquivos de configuração e chaves secretas
+.env

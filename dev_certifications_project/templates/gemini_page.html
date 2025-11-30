@@ -1,0 +1,76 @@
+{% extends "model.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    
+    <h1 class="text-center mb-4">
+        Assistente Gemini 
+        <img src="{{ url_for('static', filename='img/gemini_simbolo.png') }}" 
+             alt="Ícone Gemini" 
+             class="gemini-icon-animated">
+    </h1>
+    <p class="text-center lead text-muted mb-5">
+        <p class="text-center animated-subtitle mb-5" style="font-size: 1.25rem;">
+            Pergunte sobre certificações, tecnologias e o universo da programação.
+    </p>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card p-4 shadow-sm border-0">
+                <form id="gemini-form" method="POST" action="/gemini">
+                    <div class="mb-3">
+                        <label for="user-prompt" class="form-label visually-hidden">Sua pergunta</label>
+                        <textarea class="form-control form-control-lg minimalist-textarea" 
+                                  id="user-prompt" 
+                                  name="question"
+                                  rows="4" 
+                                  placeholder="Como a certificação AWS Cloud Practitioner pode impulsionar minha carreira?"></textarea>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button id="send-button" class="btn btn-primary btn-lg" type="submit">
+                            <span id="send-icon"><i class="bi bi-send-fill me-2"></i> Enviar Pergunta</span>
+                            <span id="loading-spinner" class="d-none">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Carregando...
+                            </span>
+                        </button>
+                    </div>
+            </form>
+            </div>
+            <div id="response-area" class="card mt-5 p-4 shadow-sm border-0" style="min-height: 250px;">
+                <h5 class="card-title text-primary mb-3">Resposta do Gemini:</h5>
+                {% if gemini_response %}
+                    <div class="gemini-response-content">
+                        {{ gemini_response | safe }}
+                    </div>
+                {% elif comunication_error %}
+                    <p class="text-danger">**Erro:** {{ comunication_error }}</p>
+                {% else %}
+                    <p class="text-muted">Aguardando sua pergunta...</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }} <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('gemini-form');
+            const sendButton = document.getElementById('send-button');
+            const sendIcon = document.getElementById('send-icon');
+            const loadingSpinner = document.getElementById('loading-spinner');
+
+            if (form && sendButton) {
+                form.addEventListener('submit', function() {
+                    sendButton.disabled = true;
+
+                    sendIcon.classList.add('d-none');
+
+                    loadingSpinner.classList.remove('d-none');
+                });
+            }
+        });
+    </script>
+{% endblock %}
