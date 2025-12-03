@@ -75,10 +75,11 @@ Acesse `http://127.0.0.1:5000` no seu navegador.
 
 ### 📦 Dependências
 
--   **Flask**: Para o servidor web.
+-   **flask**: Para o servidor web.
 -   **google-generativeai**: Para interagir com a API do Gemini.
 -   **python-dotenv**: Para gerenciar as variáveis de ambiente.
--   **Markdown**: Para converter o texto de resposta do Gemini em HTML.
+-   **markdown**: Para converter o texto de resposta do Gemini em HTML.
+
 
 Instale todas com:
 ```bash
@@ -162,10 +163,10 @@ Access `http://127.0.0.1:5000` in your browser.
 
 ### 📦 Dependencies
 
--   **Flask**: For the web server.
+-   **flask**: For the web server.
 -   **google-generativeai**: To interact with the Gemini API.
 -   **python-dotenv**: To manage environment variables.
--   **Markdown**: To convert Gemini's response text into HTML.
+-   **markdown**: To convert Gemini's response text into HTML.
 
 Install them all with:
 ```bash

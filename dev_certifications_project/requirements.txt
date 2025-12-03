@@ -1,5 +1,6 @@
-Flask
-google-genai
+flask
+google-generativeai
 python-dotenv
-showdown
+dotenv
 markdown
+showdown
