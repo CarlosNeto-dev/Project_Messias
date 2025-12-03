@@ -61,7 +61,7 @@ dev_certifications_project/
     ```bash
     pip install -r requirements.txt
     ```
-    *(Observação: Crie um arquivo `requirements.txt` com as dependências listadas abaixo).*
+    
 4.  **Configure a chave da API:**
     Crie um arquivo `.env` e adicione sua chave da API do Google Gemini:
     ```
@@ -149,7 +149,7 @@ dev_certifications_project/
     ```bash
     pip install -r requirements.txt
     ```
-    *(Note: You will need to create a `requirements.txt` file with the dependencies listed below).*
+    
 4.  **Set up the API key:**
     Create a `.env` file and add your Google Gemini API key:
     ```
