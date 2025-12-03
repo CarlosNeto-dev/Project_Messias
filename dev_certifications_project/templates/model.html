@@ -14,7 +14,6 @@
 
     <nav class="navbar navbar-expand-lg shadow-sm-sm">
         <div class="container">
-
             <a class="navbar-brand" href="/">
                 <i class="bi bi-cpu"></i> CertDev <i class="bi bi-cpu"></i>
             </a>
@@ -25,53 +24,46 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-
                 <ul class="navbar-nav ms-auto">
-
                     <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Certificações
-                    </a>
-
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item dropdown-cert-item" href="/certifications/aws">
-                                <img src="{{ url_for('static', filename='img/cert_cards/image-aws.png') }}" alt="AWS" class="cert-icon-dropdown">
-                                AWS Cloud Practitioner
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item dropdown-cert-item" href="/certifications/google_analytics">
-                                <img src="{{ url_for('static', filename='img/cert_cards/imagem_certificado-google-analytics.png') }}" alt="Google Analytics" class="cert-icon-dropdown">
-                                Google Analytics
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item dropdown-cert-item" href="/certifications/pcep">
-                                <img src="{{ url_for('static', filename='img/cert_cards/imagem_certificado-pcep.png') }}" alt="PCEP" class="cert-icon-dropdown">
-                                PCEP (Python)
-                            </a>
-                        </li>
-                    </ul>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Certificações
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item dropdown-cert-item" href="/certifications/aws">
+                                    <img src="{{ url_for('static', filename='img/cert_cards/image-aws.png') }}" alt="AWS" class="cert-icon-dropdown">
+                                    AWS Cloud Practitioner
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-cert-item" href="/certifications/google_analytics">
+                                    <img src="{{ url_for('static', filename='img/cert_cards/imagem_certificado-google-analytics2.png') }}" alt="Google Analytics" class="cert-icon-dropdown">
+                                    Google Analytics
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-cert-item" href="/certifications/pcep">
+                                    <img src="{{ url_for('static', filename='img/cert_cards/imagem_certificado-pcep.png') }}" alt="PCEP" class="cert-icon-dropdown">
+                                    PCEP (Python)
+                                </a>
+                            </li>
+                        </ul>
                     <li class="nav-item"><a class="nav-link" href="/sobre-equipe">Sobre a Equipe</a></li>
-
                     <li class="nav-item">
                         <a class="nav-link d-flex align-items-center" href="/gemini">
                             <img src="{{ url_for('static', filename='img/gemini_simbolo.png') }}" height="20">
                             Gemini
                         </a>
                     </li>
-
                     <li class="nav-item ms-lg-2">
                         <a class="nav-link" href="#" id="theme-toggler">
                             <i class="bi bi-sun-fill theme-icon-sun"></i>
                             <i class="bi bi-moon-fill theme-icon-moon"></i>
                         </a>
                     </li>
-
                 </ul>
-
             </div>
         </div>
     </nav>
@@ -79,47 +71,37 @@
     {% block hero %}
     {% endblock %}
 
-    <main class="container">
-        {% block content %}
-        {% endblock %}
+    <main class="page-transition page-transition-out" id="main-content">
+        <div class="container"> 
+            {% block content %}
+            {% endblock %}
+        </div>
     </main>
 
     <footer>
         © 2025 Guia de Certificações para Desenvolvedores — Todos os direitos reservados.
     </footer>
 
-    {% block scripts %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
-    <script>
-    {% if gemini_response %}
-
-        function renderMarkdown() {
-            const responseDiv = document.querySelector('.gemini-response-content');
-
-            if (responseDiv && responseDiv.innerText.trim() !== '') {
-                let markdownText = responseDiv.innerText.trim();
-
-                const converter = new showdown.Converter();
-                converter.setOption('simpleLineBreaks', true);
-                converter.setOption('tables', true);
-                converter.setOption('tablesHeaderId', true);
-
-                const html = converter.makeHtml(markdownText);
-
-                responseDiv.innerHTML = html;
-            }
-        }
-
-        window.addEventListener('DOMContentLoaded', renderMarkdown);
-    {% endif %}
-    </script>
-    {% endblock %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
 
+    {% block scripts %}
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const content = document.getElementById('main-content');
+            if (content) {
+                setTimeout(() => {
+                    content.classList.remove('page-transition-out');
+                    content.classList.add('page-transition-in');
+                }, 50);
+            }
+        });
+    </script>
+    
     <script>
         (() => {
             'use strict'
-
             const getStoredTheme = () => localStorage.getItem('theme')
             const setStoredTheme = theme => localStorage.setItem('theme', theme)
 
@@ -167,6 +149,7 @@
             }
         })()
     </script>
+    {% endblock %}
 
 </body>
 </html>
