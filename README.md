@@ -40,6 +40,7 @@ Este projeto está sendo desenvolvido em colaboração pelo seguinte grupo:
 | HTML | 📄 |
 | CSS | 🎨 |
 | Bootstrap | 🅱️ |
+| Javascript | 🟨 |
 
 ***
 
@@ -82,3 +83,4 @@ This project is being developed in collaboration by the following group:
 | HTML | 📄 |
 | CSS | 🎨 |
 | Bootstrap | 🅱️ |
+| Javascript | 🟨 |
