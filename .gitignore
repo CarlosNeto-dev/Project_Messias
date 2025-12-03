@@ -13,4 +13,4 @@ __pycache__/
 .DS_Store
 
 # Arquivos de configuração e chaves secretas
-.env
+dev_certifications_project/.env
