@@ -1,0 +1,96 @@
+{% extends "model.html" %}
+
+{% block hero %}
+<div class="hero">
+    <h1>Nossa Equipe</h1>
+    <p class="animated-subtitle">Conheça os membros da equipe por trás do projeto Developer Certifications.</p>
+</div>
+{% endblock %}
+    
+{% block content %}
+
+    <!-- Linha 1 -->
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card team-card h-100 text-center shadow-sm border-0">
+                <img src="{{ url_for('static', filename='img/team/Carlos.png') }}" class="card-img-top" alt="Foto de Carlos">
+                <div class="card-body">
+                    <h5 class="card-title">Carlos Neto</h5>
+                    <h6 class="card-subtitle mb-2 text-primary">Líder do Projeto</h6>
+                    <p class="card-text text-muted">Responsável pela gestão, organização e liderança da equipe, garantindo que o projeto siga no caminho certo.</p>
+                    <a href="https://github.com/CarlosNeto-dev" class="card-link" aria-label="GitHub de Carlos"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/carlos-neto-54b62339b/" class="card-link" aria-label="LinkedIn de Carlos"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card team-card h-100 text-center shadow-sm border-0">
+                <img src="{{ url_for('static', filename='img/team/Isaac.png') }}" class="card-img-top" alt="Foto de Isaac">
+                <div class="card-body">
+                    <h5 class="card-title">Isaac Lima</h5>
+                    <h6 class="card-subtitle mb-2 text-primary">Desenvolvedor Backend</h6>
+                    <p class="card-text text-muted">Responsável por criar o app.py, definir as rotas, estruturar o Flask e integrar as páginas com a API do Gemini.</p>
+                    <a href="https://github.com/isaaclimaC" class="card-link" aria-label="GitHub de Isaac"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/isaac-lima-de-carvalho-926b80272/" class="card-link" aria-label="LinkedIn de Isaac"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card team-card h-100 text-center shadow-sm border-0">
+                <img src="{{ url_for('static', filename='img/team/Guilherme.png') }}" class="card-img-top" alt="Foto de Guilherme">
+                <div class="card-body">
+                    <h5 class="card-title">Guilherme Santana</h5>
+                    <h6 class="card-subtitle mb-2 text-primary">Desenvolvedor Frontend</h6>
+                    <p class="card-text text-muted">Criou o layout base com Bootstrap, o modelo principal (modelo.html) e a estrutura dos templates para o projeto.</p>
+                    <a href="https://github.com/guilhermesantt" class="card-link" aria-label="GitHub de Guilherme"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/guilherme-santana-680319393/" class="card-link" aria-label="LinkedIn de Guilherme"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linha 2 -->
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card team-card h-100 text-center shadow-sm border-0">
+                <img src="{{ url_for('static', filename='img/team/Alex.png') }}" class="card-img-top" alt="Foto de Jose Alex">
+                <div class="card-body">
+                    <h5 class="card-title">José Alex</h5>
+                    <h6 class="card-subtitle mb-2 text-primary">Desenvolvedor Frontend</h6>
+                    <p class="card-text text-muted">Desenvolveu componentes essenciais da interface, como a barra de navegação (navbar) e o rodapé (footer) do site.</p>
+                    <a href="#" class="card-link" aria-label="GitHub de Jose Alex"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/alex-diniz-jpa" class="card-link" aria-label="LinkedIn de Jose Alex"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card team-card h-100 text-center shadow-sm border-0">
+                <img src="{{ url_for('static', filename='img/team/Lucas.png') }}" class="card-img-top" alt="Foto de Lucas">
+                <div class="card-body">
+                    <h5 class="card-title">Lucas Araujo</h5>
+                    <h6 class="card-subtitle mb-2 text-primary">Desenvolvedor de Conteúdo</h6>
+                    <p class="card-text text-muted">Responsável pela pesquisa e criação do conteúdo informativo sobre as certificações, garantindo a qualidade e relevância das informações.</p>
+                    <a href="https://github.com/lucasaarj04" class="card-link" aria-label="GitHub de Lucas"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/lucas-araujo-12aa85289/" class="card-link" aria-label="LinkedIn de Lucas"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card team-card h-100 text-center shadow-sm border-0">
+                <img src="{{ url_for('static', filename='img/team/Gustavo.png') }}" class="card-img-top" alt="Foto de Gustavo">
+                <div class="card-body">
+                    <h5 class="card-title">Gustavo Marques</h5>
+                    <h6 class="card-subtitle mb-2 text-primary">Desenvolvedor de Conteúdo</h6>
+                    <p class="card-text text-muted">Colaborou na elaboração e estruturação do conteúdo, ajudando a definir os textos e informações apresentadas nas páginas do site.</p>
+                    <a href="https://github.com/gugamarques05-ctrl" class="card-link" aria-label="GitHub de Gustavo"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gustavo-marques-685440388/" class="card-link" aria-label="LinkedIn de Gustavo"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
