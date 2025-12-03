@@ -44,7 +44,7 @@
                         {{ gemini_response | safe }}
                     </div>
                 {% elif comunication_error %}
-                    <p class="text-danger">**Erro:** {{ comunication_error }}</p>
+                    <p class="text-danger">Erro: {{ comunication_error }}</p>
                 {% else %}
                     <p class="text-muted">Aguardando sua pergunta...</p>
                 {% endif %}
@@ -55,22 +55,56 @@
 {% endblock %}
 
 {% block scripts %}
-    {{ super() }} <script>
+    {{ super() }} 
+    
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('gemini-form');
             const sendButton = document.getElementById('send-button');
             const sendIcon = document.getElementById('send-icon');
             const loadingSpinner = document.getElementById('loading-spinner');
-
-            if (form && sendButton) {
+            const responseArea = document.getElementById('response-area');
+            
+            if (form) {
                 form.addEventListener('submit', function() {
-                    sendButton.disabled = true;
+                    if (sendButton && sendIcon && loadingSpinner) {
+                        sendButton.disabled = true;
+                        sendIcon.classList.add('d-none');
+                        loadingSpinner.classList.remove('d-none');
+                    }
 
-                    sendIcon.classList.add('d-none');
-
-                    loadingSpinner.classList.remove('d-none');
+                    if (responseArea) {
+                         responseArea.classList.add('is-loading'); 
+                    }
                 });
             }
+
+            {% if gemini_response or comunication_error %}
+                if (responseArea) {
+                    responseArea.classList.remove('is-loading');
+                }
+            {% endif %}
+            
         });
+        
+        {% if gemini_response %}
+            function renderMarkdown() {
+                const responseDiv = document.querySelector('.gemini-response-content');
+                if (responseDiv && responseDiv.innerText.trim() !== '') {
+                    let markdownText = responseDiv.innerText.trim();
+                    markdownText = markdownText.replace(/(\n\s*){3,}/g, '\n\n'); 
+
+                    const converter = new showdown.Converter();
+                    converter.setOption('simpleLineBreaks', true);
+                    converter.setOption('tables', true);
+                    converter.setOption('tablesHeaderId', true);
+
+                    const html = converter.makeHtml(markdownText);
+
+                    responseDiv.innerHTML = html;
+                }
+            }
+            window.addEventListener('DOMContentLoaded', renderMarkdown);
+        {% endif %}
     </script>
 {% endblock %}

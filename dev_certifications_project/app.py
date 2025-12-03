@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 import google.generativeai as genai
 import os
-import markdown
 from dotenv import load_dotenv
 app = Flask(__name__)
 
@@ -51,7 +50,8 @@ def gemini_page():
             comunication_error = "Por favor, digite uma pergunta!"
         else:
             try:
-                context = "Você é um assistente especialista em certificações para desenvolvedores. Você deve ter conhecimento sobre AWS, Google Analytics e PCEP. Responda à pergunta do usuário de forma direta, concisa e utilizando o formato Markdown. Tente iniciar a resposta com um parágrafo normal, evitando símbolos como ` ou # na primeira linha. Se pedir para gerar uma tabela de preços, os items vazios coloque um '-'. "
+                context = """Você é um assistente especialista em certificações para desenvolvedores. Você deve ter conhecimento sobre AWS, Google Analytics e PCEP. Responda à pergunta do usuário de forma direta, concisa e utilizando o formato Markdown. Tente iniciar a resposta com um parágrafo normal, evitando símbolos como ` ou # na primeira linha. Se pedir para gerar uma tabela de preços, os items vazios coloque um '-'. Outrossim, dê o seu melhor para detalhar o máximo possível a resposta sendo didático e simples. Evite colocar um espaçamento grande entre os parágrafos.
+                Se falarem em inglês, traduza automaticamente tudo para inglês."""
                 complete_prompt = context + user_question
 
                 response = type_of_gemini.generate_content(

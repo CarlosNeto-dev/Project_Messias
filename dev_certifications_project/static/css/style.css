@@ -17,6 +17,8 @@ body {
     font-weight: 700;
     color: #111;
     font-size: 1.4rem;
+    display: inline-block;
+    animation: logo-pulse 2s infinite ease-in-out;
 }
 
 .nav-link {
@@ -657,4 +659,30 @@ ul.styled-list li strong {
 .theme-icon-moon.active {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+.gemini-response-content p {
+    margin-bottom: 0.1rem;
+}
+
+.gemini-response-content p:empty {
+    display: none;
+}
+@keyframes logo-pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
+
+.page-transition {
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-out;
+}
+
+.page-transition-out {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+}
+
+.page-transition-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
